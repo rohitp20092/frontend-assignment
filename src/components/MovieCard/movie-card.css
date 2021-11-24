@@ -1,12 +1,12 @@
 .card{
     width: 23%;
-    height: 350px;
+    height: 450px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 3px 7px grey;
     position: relative;
     cursor: pointer;
-    margin: 0px 25px 25px 0px;
+    margin: 0 0 25px 0px;
 }
 
 .rating{

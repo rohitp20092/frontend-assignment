@@ -1,16 +1,18 @@
 import React from 'react'
 import './movie-card.css'
-export const MovieCard = () => {
+
+export const MovieCard = ({movie, onClickMovie}) => {
+
     return (
-        <div className="card" >
+        <div className="card" key={movie.id} onClick={() => onClickMovie(movie)}>
             <div className="rating" >
-                5.5
+                {movie.vote_average}
             </div>
-            <div style={{backgroundImage:`url(https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810)`, backgroundSize:"cover",backgroundPosition:"center center" , width:"100%", height:"86%"}} >
+            <div style={{backgroundImage:`url(https://image.tmdb.org/t/p/w500${movie.poster_path})`, backgroundSize:"100% 100%",backgroundPosition:"center center" , width:"100%", height:"86%"}} >
                 
             </div>
             <div style={{textAlign:"center", wordWrap:"break-word", marginTop:"5px"}}>
-                Avengers
+                {movie.title}
             </div>
         </div>
     )
